@@ -36,12 +36,16 @@ let dinosaur3;
   });
 
   it('should be able to add a dinosaur to its collection', function () {
-    park.dinosaurs.push(dinosaur4)
+    park.addDino(dinosaur4);
     const actual = park.dinosaurs;
     assert.deepStrictEqual(actual, [dinosaur1, dinosaur2, dinosaur3, dinosaur4]);
   });
 
-  it('should be able to remove a dinosaur from its collection');
+  it('should be able to remove a dinosaur from its collection', function () {
+    park.removeDino(dinosaur2);
+    const actual = park.dinosaurs;
+    assert.deepStrictEqual(actual, [dinosaur1, dinosaur3, dinosaur4]);
+  });
 
   it('should be able to find the dinosaur that attracts the most visitors');
 
